@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+#root{
+  width: 100%;
+  height: 100%;
+}
+
+body, html {
+  min-height: 100%;
+  width:100%;
+  font-family: 'Quicksand';
+  margin: 0;
+  padding: 0;
+}
+
+#App-wrapper{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: auto;
+}
+
+#Qote{
+  position: absolute;
+  left:1%;
+  top:1%;
+  width:200px;
+  height: auto;
+}
+
+#quoteQuery{
+  font-size: 30px;
+  outline: none;
+  position: absolute;
+  padding: 10px;
+  top:20%;
+  left:50%;
+  white-space: nowrap;
+  border-radius: 20px;
+  border-left: solid 20px transparent;
+  border-right: solid 20px transparent;
+  border-top:none;
+  border-bottom: 12px;
+  transform: translateX(-50%);
+  font-family: 'Quicksand';
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.667);
+  transition: all ease-in-out 0.5s;
+}
+
+/*#quoteQuery::-webkit-search-cancel-button{
+    position:relative;
+    right:15px;  
+    cursor: pointer;
+    -webkit-appearance: none;
+    height: 30px;
+    width: 30px;
+    border-radius:10px;
+    background: black;
+    transition: all ease-in-out 0.2s;
+}
+
+#quoteQuery::-webkit-search-cancel-button:hover{
+    transform: scale(1.2);
+}*/
+
+#submitValue{
+  width:150px;
+  height:75px;
+  line-height: 75px;
+  border-radius: 50px;
+  position: absolute;
+  top:36%;
+  left:50%;
+  transform: translateX(-50%);
+  transform-origin: center;
+  border: solid 2px white;
+  color: white;
+  outline: none;
+  transition: all ease-in-out 0.2s;
+  text-align: center;
+  cursor: pointer;
+  background: black;
+  font-size: 24px;
+  font-family: 'QuickSand';
+}
+
+#submitValue:hover{
+  border:none;
+  letter-spacing: 3px;
+}
+
+#btnContainer{
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: space-around;
+  width:400px;
+  position: absolute;
+  top:4%;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.choiceBtn{
+  width: 50px;
+  text-align: center;
+  height:50px;
+  line-height: 50px;
+  border-radius: 50%;
+  padding:8px;
+  box-shadow: 0 10px 30px #000;
+  transition: all ease-in-out 0.2s;
+  border: solid 2px white;
+  transform-origin: center;
+  background: white;
+  color: 'black';
+  cursor: pointer;
+}
+
+.choiceBtn:hover{
+  transform: scale(1.2);
+  box-shadow: none;
+  border: solid 2px black;
+}
+
+#quotesContainer{
+  display: flex; 
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  position: absolute;
+  top:49%;
+  left:50%;
+  transform: translateX(-50%);
+  padding:20px;
+  width:50%;
+}
+
+#quoteWrapper{
+ padding: 30px;
+ padding-bottom: 5px;
+ margin-top: 15px;
+ border-radius: 25px;
+ box-shadow: 10px 10px 30px #000;
+ background: white;
+ transition: all ease-in-out 0.8s;
+}
+
+#quoteWrapper:hover{
+  transform: perspective(500px) translate3d(0, 25px, 50px);
+}
+
+#quoteBody{
+  font-size:24px;
+  line-height: 30px;
+}
+
+.quoteSymbol{
+  font-size:24px;
+  max-height: 30px;
+  position: relative;
+  text-align: center;
+  text-shadow: -0.5px 0 #808080, 0 0.5px #808080, 0.5px 0 #808080, 0 -0.5px #808080;  
+}
+
+#quoteAuthor{
+  font-style: italic;
+  float: right;
+}
+
+#tags{
+  float: left;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+#tagQuotes{
+  text-shadow: -0.5px 0 #808080, 0 0.5px #808080, 0.5px 0 #808080, 0 -0.5px #808080;
+  flex : 0 0 auto;
+}
+
+#bottomWrapper{
+  position: relative;
+  height: 30px;
+  margin-top: 10px;
+  bottom: 0;
+  line-height: 30px;
+}
+
+#squareContainer{
+  position:relative;
+  top:50px;
+  left:50%;
+  width:250px;
+  height:100px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.square{
+  position:absolute;
+  width:50px;
+  height:50px;
+  background:#000;
+  border-radius: 10px;
+  top:41%;
+}
+
+#square1{
+  left:10px;
+  animation: sq1 0.2s alternate ease-in-out infinite ;
+}
+
+@keyframes sq1 {
+  0%{
+    opacity: 1;
+    border-radius: 10px
+  }
+  100%{
+    opacity:0.4;
+    transform: translateY(50px);
+    border-radius: 50px;
+  }
+}
+
+#square2{
+  left:70px;
+  animation: sq2 0.2s alternate ease-in-out infinite 0.025s;
+}
+
+@keyframes sq2 {
+  0%{
+    opacity: 0.8;
+    border-radius: 10px
+  }
+  100%{
+    opacity:0.6;
+    transform: translateY(50px);
+    border-radius: 50px;
+  }
+}
+
+#square3{
+  right:70px;
+  animation: sq3 0.2s alternate ease-in-out infinite 0.05s;
+}
+
+@keyframes sq3 {
+  0%{
+    opacity: 0.6;
+    border-radius: 10px
+  }
+  100%{
+    opacity:0.8;
+    transform: translateY(50px);
+    border-radius: 50px;
+  }
+}
+
+#square4{
+  right:10px;
+  animation: sq4 0.2s alternate ease-in-out infinite 0.075s;
+}
+
+@keyframes sq4 {
+  0%{
+    opacity: 0.4;
+    border-radius: 10px
+  }
+  100%{
+    opacity:1;
+    transform: translateY(50px);
+    border-radius: 50px;
+  }
+}
+
+
+/*RESPONSIVE DESIGN*/
+
+@media screen and (max-width: 1024px){
+  #Qote{
+    left:50%;
+    transform: translateX(-50%);
+  }
+  #btnContainer{
+      top:16%;
+  }
+  #quoteQuery{
+    top: 31%;
+    width:100px;
+  }
+  #submitValue{
+    top:46%;
+  }
+  #quotesContainer{
+    width:80%;
+    top:58%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  #submitValue{
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+    font-size:20px;
+  }
+  #quoteBody{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px){
+
+  #btnContainer{
+    justify-content: center;
+    top:16%;
+  }  
+  .choiceBtn{
+    margin: 0 20px 20px 20px;
+  }
+  #quoteQuery{
+    top:32%;
+  }
+  #quotesContainer{
+    top:58%;
+  }
+  #submitValue{
+    top:48%;
+  }
+  #Qote{
+    width: 150px;
+  }
+}
