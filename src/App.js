@@ -5,7 +5,6 @@ import axios from "axios";
 //Quote services
 const API_BASE_URL = "https://favqs.com/api";
 const API_KEY = process.env.REACT_APP_FAVQS_API_KEY;
-console.log(API_KEY);
 
 const requestConfig = {
   headers: {
